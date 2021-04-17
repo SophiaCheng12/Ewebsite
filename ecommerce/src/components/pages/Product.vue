@@ -1,7 +1,7 @@
 <template>
   <div>
     <loading :active.sync="isLoading"> </loading>
-    <Navbar :initialcart="cart.carts" />
+    <Navbar :initialCartLength="cartLength" />
     <body>
       <div class="d-flex flex-column align-items-center">
         <div class="d-flex flex-row">
@@ -49,7 +49,6 @@
                   class="form-control mt-3 select"
                   v-model="num"
                 >
-                  <!-- v-model="product.num" -->
                   <option :value="num" v-for="num in 10" :key="num">
                     {{ num }}{{ product.unit }}
                   </option>
@@ -101,6 +100,7 @@ export default {
         loadingItem: "",
       },
       isLoading: false,
+      cartLength: 0,
     };
   },
 
@@ -130,12 +130,12 @@ export default {
       const vm = this;
       const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
       try {
-        // vm.isLoading = true;
         const response = await this.$http.get(url);
 
         console.log("response2", response);
-        // vm.isLoading = false;
+
         vm.cart = response.data.data;
+        vm.cartLength = vm.cart.carts.length;
       } catch (error) {
         console("error", error);
       }

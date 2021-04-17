@@ -14,7 +14,6 @@
             <tr>
               <th width="60"><p class="category">分類</p></th>
               <th width="100">產品名稱</th>
-              <!-- <th width="120">原價</th> -->
               <th width="100">售價</th>
               <th width="80">是否啟用</th>
               <th width="60">編輯</th>

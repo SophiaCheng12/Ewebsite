@@ -2,7 +2,7 @@
   <body>
     <div>
       <loading :active.sync="isLoading"> </loading>
-      <Navbar :initialcart="cart.carts" />
+      <Navbar :initialCartLength="cartLength" />
 
       <!-- shopping cart -->
       <div class="d-flex flex-rows shoppingOrder">
@@ -236,6 +236,7 @@ export default {
         message: "",
       },
       isLoading: false,
+      cartLength: 0,
     };
   },
 
@@ -254,6 +255,7 @@ export default {
         // console.log("response2", response.data.data.carts);
         vm.isLoading = false;
         vm.cart = response.data.data;
+        vm.cartLength = vm.cart.carts.length;
       } catch (error) {
         console.log("error", error);
       }
@@ -298,7 +300,6 @@ export default {
 </script>
 
 <style scoped>
-/*https://cdn.pixabay.com/photo/2019/12/18/13/52/christmas-4704044__340.jpg*/
 body {
   background-image: url("https://cdn.pixabay.com/photo/2020/11/29/15/06/box-5788021__340.jpg");
   background-repeat: no-repeat;

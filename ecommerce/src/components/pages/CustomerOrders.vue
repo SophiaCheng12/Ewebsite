@@ -5,7 +5,7 @@
 
     <CustomerNavbar
       @after-showPagination="handleAfterShowPagination"
-      :initialcart="cart.carts"
+      :initialCartLength="cartLength"
     />
 
     <!-- nav-pills -->
@@ -135,6 +135,12 @@ export default {
     Pagination,
     Footer,
   },
+  props: {
+    initialCartLength: {
+      type: Number,
+      require: true,
+    },
+  },
   data() {
     return {
       products: [],
@@ -148,6 +154,7 @@ export default {
       },
       isLoading: false,
       isPagination: true,
+      cartLength: 0,
 
       form: {
         user: {
@@ -170,7 +177,7 @@ export default {
   methods: {
     async getProducts(page = 1) {
       const vm = this;
-      // const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;
+
       try {
         const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products?page=${page}`;
         vm.isLoading = true;
@@ -232,8 +239,8 @@ export default {
         console.log("getCartresponse", response);
         // console.log("response2", response.data.data.carts);
         vm.isLoading = false;
-
         vm.cart = response.data.data;
+        vm.cartLength = vm.cart.carts.length;
         console.log(vm.cart);
       } catch (error) {
         console.log("error", error);

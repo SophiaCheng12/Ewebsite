@@ -402,10 +402,6 @@ label {
   border-radius: 0px;
   background-color: #fffcf0;
 }
-/* .modalFooter { */
-/* background-color: #fffcf0; */
-/* background-color: white;
-} */
 .checkButton {
   background-color: #c5c6b6;
   border: none;

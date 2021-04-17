@@ -2,7 +2,7 @@
   <body>
     <div>
       <loading :active.sync="isLoading"></loading>
-      <Navbar :initialcart="cart.carts" />
+      <Navbar :initialCartLength="cartLength" />
 
       <div>
         <img
@@ -95,6 +95,7 @@ export default {
       isLoading: false,
       data: [],
       isPagination: true,
+      cartLength: 0,
     };
   },
 
@@ -135,6 +136,7 @@ export default {
         console.log("response", response);
         // console.log("response2", response.data.data.carts);
         vm.cart = response.data.data;
+        vm.cartLength = vm.cart.carts.length;
         vm.isLoading = false;
       });
     },
@@ -181,7 +183,6 @@ body {
 }
 .popular {
   background-color: #f2e9e1;
-  /* margin-top: 500px; */
 }
 .popular2 {
   margin-left: 30px;

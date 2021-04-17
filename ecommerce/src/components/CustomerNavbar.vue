@@ -29,8 +29,8 @@
                 </p></router-link
               >
 
-              <div class="length" v-if="cart.length > 0">
-                {{ cart.length }}
+              <div class="length" v-if="cartLength > 0">
+                {{ cartLength }}
               </div>
             </div>
           </div>
@@ -51,8 +51,8 @@
 <script>
 export default {
   props: {
-    initialcart: {
-      type: Array,
+    initialCartLength: {
+      type: Number,
       require: true,
     },
   },
@@ -60,6 +60,7 @@ export default {
     return {
       isRouterLink: true,
       cart: [],
+      cartLength: 0,
     };
   },
 
@@ -69,18 +70,17 @@ export default {
 
   methods: {
     getCart() {
-      this.cart = this.initialcart;
+      this.cartLength = this.initialCartLength;
     },
 
     showPagination(boolean) {
-      // console.log("ok");
       this.$emit("after-showPagination", boolean);
     },
   },
 
   watch: {
-    initialcart() {
-      this.cart = this.initialcart;
+    initialCartLength() {
+      this.cartLength = this.initialCartLength;
     },
   },
 };

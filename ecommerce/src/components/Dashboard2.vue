@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar :initialcart="cart.carts" />
+    <Navbar :initialCartLength="cartLength" />
 
     <Alert />
     <body>
@@ -28,6 +28,7 @@ export default {
   data() {
     return {
       cart: [],
+      cartLength: 0,
     };
   },
 
@@ -42,10 +43,10 @@ export default {
 
       try {
         const response = await this.$http.get(url);
-        console.log("response", response);
-        console.log("response2", response);
 
+        // console.log("response2", response);
         vm.cart = response.data.data;
+        vm.cartLength = vm.cart.carts.length;
       } catch (error) {
         console.log("error", error);
       }

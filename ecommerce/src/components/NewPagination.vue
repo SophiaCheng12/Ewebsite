@@ -58,19 +58,6 @@ export default {
     };
   },
 
-  created() {
-    //把token從cookie裡取出
-    const myCookie = document.cookie.replace(
-      /(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/,
-      "$1"
-    );
-    // console.log("myCookie", myCookie);
-    //把cookie往後端傳送
-    //所有發出去的請求預設都會加入myCookie
-    this.$http.defaults.headers.common.Authorization = myCookie;
-    this.pagination = this.initialPagination;
-  },
-
   methods: {
     async getPagination(page = 1) {
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products?page=${page}`;

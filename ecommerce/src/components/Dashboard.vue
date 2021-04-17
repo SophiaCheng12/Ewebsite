@@ -8,8 +8,6 @@
           <main class="col-lg-9 col-md-8 col-sm-6">
             <router-view />
           </main>
-
-          <!--  class="col-lg-9 ml-sm-auto col-sm-8 mt-auto" -->
         </div>
       </div>
     </body>
