@@ -27,14 +27,14 @@
                     </td>
 
                     <td class="align-middle text-right">
-                      <p class="total">{{ item.final_total }}</p>
+                      <p class="total">{{ item.final_total | currency }}元</p>
                     </td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr>
                     <td colspan="2" class="text-right">總計</td>
-                    <td class="text-right">{{ order.total }}</td>
+                    <td class="text-right">{{ order.total | currency }}元</td>
                   </tr>
                 </tfoot>
               </table>
