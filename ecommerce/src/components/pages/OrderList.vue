@@ -311,6 +311,9 @@ td {
   height: 0;
   color: transparent;
 }
+.time {
+  white-space: nowrap;
+}
 .client {
   /* border: 1px solid red; */
   padding-left: 10px;
