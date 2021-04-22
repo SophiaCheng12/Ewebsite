@@ -45,7 +45,7 @@
                   </td>
                 </div>
               </div>
-              <td>{{ order.total | currency }}元</td>
+              <td class="totalMoney">{{ order.total | currency }}元</td>
               <td>
                 <span class="text-success" v-if="order.is_paid"> 已付款</span>
                 <span v-else>未付款</span>
@@ -314,21 +314,33 @@ td {
 .client {
   /* border: 1px solid red; */
   padding-left: 10px;
+  white-space: nowrap;
 }
 .tel {
   padding-right: 35px;
+  white-space: nowrap;
 }
 .email {
   padding-right: 65px;
+  white-space: nowrap;
 }
 .item {
   padding-right: 50px;
+  white-space: nowrap;
 }
 .money {
   padding-left: 30px;
+  white-space: nowrap;
+}
+.totalMoney {
+  white-space: nowrap;
+}
+.pay {
+  white-space: nowrap;
 }
 .edit {
   padding-right: 20px;
+  white-space: nowrap;
 }
 [type="text"],
 [type="number"],
@@ -429,6 +441,6 @@ label {
 .pagination {
   margin-top: 90px;
   margin-bottom: 20px;
-  margin-left: 410px;
+  margin-left: 390px;
 }
 </style>
