@@ -400,7 +400,7 @@ textarea {
   margin-left: -150px;
 }
 .price {
-  margin-left: 40px;
+  margin-left: 28px;
   width: 95x;
   white-space: nowrap;
 }
