@@ -15,7 +15,7 @@
 
 ### Build Setup
 
-``` bash
+- bash
 # install dependencies
 npm install
 
@@ -23,7 +23,7 @@ npm install
 npm run dev
 
 
- - 專案截圖
+- 專案截圖
 
- ![image](https://github.com/SophiaCheng12/Ewebsite/blob/main/ecommerce/img/ecommerce.png)
+ ![image](https://github.com/SophiaCheng12/Ewebsite/blob/main/ecommerce/src/img/ecommerce.png)
 
