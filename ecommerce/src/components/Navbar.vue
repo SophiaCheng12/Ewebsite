@@ -99,7 +99,7 @@ a {
 .info {
   margin-top: 35px;
   letter-spacing: 5px;
-  margin-left: -35px;
+  margin-left: -29px;
   font-size: 20px;
   color: black;
 }

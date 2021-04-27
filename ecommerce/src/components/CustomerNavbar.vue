@@ -9,14 +9,14 @@
             >
             <div class="d-flex flex-row info">
               <router-link to="/about">
-                <P class="mr-5 mt-4 about" style="color: #c5c6b6"
+                <P class="mt-4 about" style="color: #c5c6b6"
                   >ABOUT</P
                 ></router-link
               >
 
               <a
                 href="#"
-                class="ml-5 mt-4"
+                class="mt-4 products"
                 style="color: #c5c6b6"
                 @click.stop.prevent="showPagination(true)"
               >
@@ -94,22 +94,26 @@ a {
   margin-left: 29%;
 }
 .title {
-  margin-left: -20px;
+  margin-left: -75px;
   margin-top: 20px;
   letter-spacing: 15px;
   font-size: 35px;
   color: black;
 }
 
-.shopping {
-  margin-left: 90px;
-}
 .info {
   margin-top: 35px;
   letter-spacing: 5px;
-  margin-left: 40px;
+  margin-left: -14px;
   font-size: 20px;
   color: black;
+  text-align: center;
+}
+.about {
+  margin-right: 80px;
+}
+.products {
+  margin-right: 80px;
 }
 .signOut {
   cursor: pointer;
