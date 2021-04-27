@@ -10,18 +10,17 @@
               <span class="badge badge-secondary mr-2">分類 </span
               ><span>{{ product.category }}</span>
             </div>
-            <div>
-              <img
-                class="image"
-                :src="product.imageUrl"
+            <div class="image" style="height: 320px; width: 600px">
+              <div
                 style="
-                  height: 320px;
-                  width: 600px;
+                  height: 100%;
+                  width: 100%;
                   background-size: cover;
-                  background-position: center;
+                  background-position-y: 60%;
                 "
-                alt=""
-              />
+                class="imageContent"
+                :style="{ backgroundImage: `url(${product.imageUrl})` }"
+              ></div>
             </div>
           </div>
 
