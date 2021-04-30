@@ -4,13 +4,23 @@
       <loading :active.sync="isLoading"></loading>
       <Navbar :initialCartLength="cartLength" />
 
-      <div>
-        <img
+      <div style="height: 450px; width: 1348px">
+        <div
+          style="
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position-y: 60%;
+          "
+          class="majorImg"
+        ></div>
+        <!-- :style="{ backgroundImage: `url(${product.imageUrl})` }" -->
+        <!-- <img
           src="https://images.unsplash.com/photo-1503351107055-43fe50b5d4fa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTN8fGpld2Vscnl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
           alt=""
           style="height: 450px"
           class="majorImg"
-        />
+        /> -->
       </div>
       <div class="about">
         <p class="text">
@@ -150,7 +160,11 @@ body {
   background-color: #f2e9e1;
 }
 .majorImg {
-  opacity: 0.6;
+  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1503351107055-43fe50b5d4fa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTN8fGpld2Vscnl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
 }
 
 .about {
