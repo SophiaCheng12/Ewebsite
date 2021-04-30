@@ -4,22 +4,29 @@
       <nav class="navbar navbar-white bg-white" style="height: 180px">
         <div class="brand">
           <div class="d-flex flex-column align-items-center">
-            <router-link to="/about"
-              ><h2 class="title">Jewelry Box</h2></router-link
-            >
+            <div>
+              <router-link to="/about"
+                ><h2 class="title">Jewelry Box</h2></router-link
+              >
+            </div>
+            <!-- <div class="d-flex flex-row justify-content-end"> -->
             <div class="d-flex flex-row info">
               <router-link to="/about">
-                <P class="mt-4 mr-5" style="color: #c5c6b6"
+                <P class="about mt-4" style="color: #c5c6b6"
                   >ABOUT</P
                 ></router-link
               >
+
+              <!--  mr-5 -->
+
               <router-link
                 to="/customer_order"
-                class="mt-4 ml-5"
+                class="product mt-4"
                 style="color: #c5c6b6"
               >
                 PRODUCTS
               </router-link>
+              <!--  ml-5 -->
 
               <router-link to="/shopping_cart"
                 ><p class="mt-4 shopping" style="color: #c5c6b6">
@@ -32,6 +39,7 @@
             </div>
           </div>
         </div>
+        <!-- </div> -->
 
         <ul class="navbar-nav signOutAll">
           <li class="nav-item text-nowrap d-flex flex-row">
@@ -87,19 +95,29 @@ a {
   margin-left: 29%;
 }
 .title {
-  margin-left: -80px;
+  /* margin-left: -80px; */
   margin-top: 20px;
   letter-spacing: 15px;
   font-size: 35px;
   color: black;
+  margin: 0 auto;
+}
+.about {
+  margin: 0 auto;
+  padding-right: 80px;
 }
 .shopping {
-  margin-left: 90px;
+  margin: 0 auto;
+}
+.product {
+  margin: 0 auto;
+  padding-right: 80px;
 }
 .info {
+  /* border: 1px solid red; */
   margin-top: 35px;
   letter-spacing: 5px;
-  margin-left: -29px;
+  margin-left: -38px;
   font-size: 20px;
   color: black;
 }
