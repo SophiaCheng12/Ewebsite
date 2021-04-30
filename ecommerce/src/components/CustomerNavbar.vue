@@ -4,9 +4,11 @@
       <nav class="navbar navbar-white bg-white" style="height: 180px">
         <div class="brand">
           <div class="d-flex flex-column align-items-center">
-            <router-link to="/about"
-              ><h2 class="title">Jewelry Box</h2></router-link
-            >
+            <div>
+              <router-link to="/about"
+                ><h2 class="title">Jewelry Box</h2></router-link
+              >
+            </div>
             <div class="d-flex flex-row info">
               <router-link to="/about">
                 <P class="mt-4 about" style="color: #c5c6b6"
@@ -94,26 +96,31 @@ a {
   margin-left: 29%;
 }
 .title {
-  margin-left: -75px;
   margin-top: 20px;
   letter-spacing: 15px;
   font-size: 35px;
   color: black;
+  margin: 0 auto;
 }
 
 .info {
+  /* border: 1px solid red; */
   margin-top: 35px;
   letter-spacing: 5px;
-  margin-left: -14px;
+  margin-left: -38px;
   font-size: 20px;
   color: black;
-  text-align: center;
 }
 .about {
-  margin-right: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
 }
 .products {
-  margin-right: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+}
+.shopping {
+  margin: 0 auto;
 }
 .signOut {
   cursor: pointer;
