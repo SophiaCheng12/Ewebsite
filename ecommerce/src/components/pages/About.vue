@@ -14,13 +14,7 @@
           "
           class="majorImg"
         ></div>
-        <!-- :style="{ backgroundImage: `url(${product.imageUrl})` }" -->
-        <!-- <img
-          src="https://images.unsplash.com/photo-1503351107055-43fe50b5d4fa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTN8fGpld2Vscnl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-          alt=""
-          style="height: 450px"
-          class="majorImg"
-        /> -->
+        
       </div>
       <div class="about">
         <p class="text">
@@ -50,16 +44,60 @@
             :key="item.index"
             class="swiper_box"
           >
-            <div class="image">
-              <img
-                :src="item.imageUrl"
-                style="width: 200px; height: 200px"
-                class="image2 swiper-slide"
-              />
-            </div>
+            <router-link :to="{ name: 'Product', params: { id: item.id } }">
+              <div class="image" style="width: 190px; height: 190px">
+                <img
+                  :src="item.imageUrl"
+                  style="width: 170px; height: 170px"
+                  class="image2 swiper-slide"
+                />
+              </div>
+            </router-link>
+            <!-- :click="productPage(item.id)" -->
           </swiper-slide>
         </swiper>
       </div>
+
+     <div v-for="data in datas" :key="data.index">
+     <div>{{data.title}}</div>
+     <div style="height:150px;width:150px">
+     <!-- <img src="../../img/design1.png" alt="" 
+       /> -->
+       <img :src="data.img" alt="" />
+     </div>
+     </div>
+<!-- 
+ <div>製作蠟模</div>
+     <div style="height:150px;width:150px">
+     <img src="../../img/engraving.png" alt="" 
+       />
+     </div>
+
+     <div>加工</div>
+     <div style="height:150px;width:150px">
+     <img src="../../img/processing.png" alt="" 
+       />
+     </div>
+
+     <div>鑲嵌寶石</div>
+     <div style="height:150px;width:150px">
+     <img src="../../img/mosaic.png" alt="" 
+       />
+     </div>
+
+     <div>磨光</div>
+     <div style="height:150px;width:150px">
+     <img src="../../img/polished.png" alt="" 
+       />
+     </div>
+
+      <div>珠寶完成，質量檢定</div>
+     <div style="height:150px;width:150px">
+     <img src="../../img/quality.png" alt="" 
+       />
+     </div> -->
+
+
 
       <Footer class="footer" />
     </div>
@@ -69,7 +107,12 @@
 <script>
 import Navbar from "../../components/Navbar.vue";
 import Footer from "../../components/Footer.vue";
-
+import img1 from "../../img/design1.png"
+import img2 from "../../img/engraving.png"
+import img3 from "../../img/processing.png"
+import img4 from "../../img/mosaic.png"
+import img5 from "../../img/polished.png"
+import img6 from "../../img/quality.png"
 export default {
   name: "About",
   components: {
@@ -106,7 +149,42 @@ export default {
       data: [],
       isPagination: true,
       cartLength: 0,
+      new: "",
+    
+    
+    datas:
+    [
+       {
+      title: "珠寶圖面設計",
+      img : img1
+      },
+       {
+      title:"製作蠟模",
+      img : img2
+      },
+       {
+      title:"加工",
+      img : img3
+      },
+       {
+      title:"鑲嵌寶石",
+      img : img4
+      },
+       {
+      title:"磨光",
+      img : img5
+      },
+       {
+      title:"珠寶完成，質量檢定",
+      img : img6
+      }
+
+
+    ]
+    
+    
     };
+
   },
 
   created() {
@@ -150,6 +228,14 @@ export default {
         vm.isLoading = false;
       });
     },
+
+    // productPage(itemId) {
+    //   let routeUrl = this.$router.resolve({
+    //     name: "Product",
+    //     params: { id: itemId },
+    //   });
+    //   window.open(routeUrl.href, "_blank");
+    // },
   },
 };
 </script>
@@ -160,7 +246,7 @@ body {
   background-color: #f2e9e1;
 }
 .majorImg {
-  opacity: 0.4;
+  opacity: 0.5;
   height: 100%;
   width: 100%;
   background-image: url("https://images.unsplash.com/photo-1503351107055-43fe50b5d4fa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTN8fGpld2Vscnl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
@@ -211,17 +297,19 @@ body {
 .image {
   display: flex;
   justify-content: space-evenly;
-  background-color: #f2e9e1;
+  margin-top: 20px;
   padding-top: 20px;
   margin-bottom: 80px;
+  background-color: #d9d4cf;
+  border-radius: 10px;
+  opacity: 0.6;
 }
 .image2 {
-  border-radius: 10px;
-  margin-bottom: 20px;
+  border-radius: 50%;
+  margin-top: -10px;
   transition: 0.9s;
   opacity: 1;
   background-color: #f2e9e1;
-  border: 1px solid #f2e9e1;
 }
 .image2:hover {
   opacity: 0.6;
