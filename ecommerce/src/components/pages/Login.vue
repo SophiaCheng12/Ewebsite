@@ -85,15 +85,14 @@ export default {
 body {
   display: flex;
   align-items: center;
-  padding-top: 320px;
-
+  padding-top: 390px;
   background-image: url("https://cdn.pixabay.com/photo/2018/01/09/22/51/rose-3072698__340.jpg");
   background-repeat: no-repeat;
   background-size: 150%;
-  max-height: 625px;
-  overflow: hidden;
+  height: 100%;
   opacity: 0.8;
   transform: rotate(180deg);
+  border: 1px solid red;
 }
 .signin {
   letter-spacing: 5px;

@@ -60,7 +60,7 @@
       <div class="totalProcess">
         <div class="processTitle">
           <i class="far fa-heart" style="font-size: 16px"> </i>
-          <span>精細的製程，把完美交到你手上</span>
+          <span>精細製程</span>
         </div>
         <div class="process">
           <div v-for="data in datas" :key="data.index" class="processContent" >
@@ -75,8 +75,9 @@
         </div>
       </div>
     
-
+      <div>
       <Footer class="footer" />
+      </div>
     </div>
   </body>
 </template>
@@ -254,6 +255,7 @@ body {
 }
 .popular {
   background-color: #f2e9e1;
+  margin-top:100px;
 }
 .popular2 {
   margin-left: 30px;
@@ -262,13 +264,13 @@ body {
 .popular2:before {
   content: "\2606";
 }
-.popular2:after {
+/* .popular2:after {
   content: "\2606";
-}
+} */
 .image {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 40px;
   padding-top: 20px;
   margin-bottom: 80px;
   background-color: #d9d4cf;
@@ -296,7 +298,7 @@ body {
   width:100%;
  }
 .processTitle {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   margin-left: 35px;
   font-size: 23px;
 }
