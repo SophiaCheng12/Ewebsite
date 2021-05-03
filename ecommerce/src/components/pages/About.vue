@@ -4,7 +4,7 @@
       <loading :active.sync="isLoading"></loading>
       <Navbar :initialCartLength="cartLength" />
 
-      <div style="height: 450px; width: 1348px">
+      <div style="height: 450px; width:auto">
         <div
           style="
             height: 100%;
@@ -14,7 +14,6 @@
           "
           class="majorImg"
         ></div>
-        
       </div>
       <div class="about">
         <p class="text">
@@ -58,46 +57,24 @@
         </swiper>
       </div>
 
-     <div v-for="data in datas" :key="data.index">
-     <div>{{data.title}}</div>
-     <div style="height:150px;width:150px">
-     <!-- <img src="../../img/design1.png" alt="" 
-       /> -->
-       <img :src="data.img" alt="" />
-     </div>
-     </div>
-<!-- 
- <div>製作蠟模</div>
-     <div style="height:150px;width:150px">
-     <img src="../../img/engraving.png" alt="" 
-       />
-     </div>
-
-     <div>加工</div>
-     <div style="height:150px;width:150px">
-     <img src="../../img/processing.png" alt="" 
-       />
-     </div>
-
-     <div>鑲嵌寶石</div>
-     <div style="height:150px;width:150px">
-     <img src="../../img/mosaic.png" alt="" 
-       />
-     </div>
-
-     <div>磨光</div>
-     <div style="height:150px;width:150px">
-     <img src="../../img/polished.png" alt="" 
-       />
-     </div>
-
-      <div>珠寶完成，質量檢定</div>
-     <div style="height:150px;width:150px">
-     <img src="../../img/quality.png" alt="" 
-       />
-     </div> -->
-
-
+      <div class="totalProcess">
+        <div class="processTitle">
+          <i class="far fa-heart" style="font-size: 16px"> </i>
+          <span>精細的製程，把完美交到你手上</span>
+        </div>
+        <div class="process">
+          <div v-for="data in datas" :key="data.index" class="processContent" >
+            <span>{{ data.step }}</span>
+            <span class="dataTitle">{{ data.title }}</span>
+            
+            <div style="height: 200px; width: 300px">
+              
+              <img :src="data.img" alt="" class="mt-3 dataImg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    
 
       <Footer class="footer" />
     </div>
@@ -107,12 +84,12 @@
 <script>
 import Navbar from "../../components/Navbar.vue";
 import Footer from "../../components/Footer.vue";
-import img1 from "../../img/design1.png"
-import img2 from "../../img/engraving.png"
-import img3 from "../../img/processing.png"
-import img4 from "../../img/mosaic.png"
-import img5 from "../../img/polished.png"
-import img6 from "../../img/quality.png"
+import img1 from "../../img/design1.png";
+import img2 from "../../img/engraving.png";
+import img3 from "../../img/processing.png";
+import img4 from "../../img/mosaic.png";
+import img5 from "../../img/polished.png";
+import img6 from "../../img/quality.png";
 export default {
   name: "About",
   components: {
@@ -150,41 +127,40 @@ export default {
       isPagination: true,
       cartLength: 0,
       new: "",
-    
-    
-    datas:
-    [
-       {
-      title: "珠寶圖面設計",
-      img : img1
-      },
-       {
-      title:"製作蠟模",
-      img : img2
-      },
-       {
-      title:"加工",
-      img : img3
-      },
-       {
-      title:"鑲嵌寶石",
-      img : img4
-      },
-       {
-      title:"磨光",
-      img : img5
-      },
-       {
-      title:"珠寶完成，質量檢定",
-      img : img6
-      }
 
-
-    ]
-    
-    
+      datas: [
+        {
+          title: "珠寶圖面設計",
+          img: img1,
+          step: "(一)",
+        },
+        {
+          title: "製作蠟模",
+          img: img2,
+          step: "(二)",
+        },
+        {
+          title: "加工",
+          img: img3,
+          step: "(三)",
+        },
+        {
+          title: "鑲嵌寶石",
+          img: img4,
+          step: "(四)",
+        },
+        {
+          title: "磨光",
+          img: img5,
+          step: "(五)",
+        },
+        {
+          title: "珠寶完成，質量檢定",
+          img: img6,
+          step: "(六)",
+        },
+      ],
     };
-
   },
 
   created() {
@@ -229,13 +205,7 @@ export default {
       });
     },
 
-    // productPage(itemId) {
-    //   let routeUrl = this.$router.resolve({
-    //     name: "Product",
-    //     params: { id: itemId },
-    //   });
-    //   window.open(routeUrl.href, "_blank");
-    // },
+    
   },
 };
 </script>
@@ -243,7 +213,8 @@ export default {
 
 <style scoped>
 body {
-  background-color: #f2e9e1;
+  background-color: #f2e9e1; 
+  
 }
 .majorImg {
   opacity: 0.5;
@@ -264,7 +235,7 @@ body {
   margin-top: 60px;
   line-height: 65px;
   letter-spacing: 15px;
-  font-size: 18px;
+  font-size: 23px;
 }
 .text2 {
   margin-left: 150px;
@@ -286,7 +257,7 @@ body {
 }
 .popular2 {
   margin-left: 30px;
-  font-size: 20px;
+  font-size: 23px;
 }
 .popular2:before {
   content: "\2606";
@@ -314,6 +285,34 @@ body {
 .image2:hover {
   opacity: 0.6;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.totalProcess {
+  margin-top: 60px;
+  
+  padding-bottom: -60px;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+ }
+.processTitle {
+  margin-bottom: 70px;
+  margin-left: 35px;
+  font-size: 23px;
+}
+.dataTitle {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+.process {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(2, 250px);
+  margin-left: 50px;
+  grid-gap:50px;
+   opacity:0.8
+}
+.footer {
+  margin-top: -150px;
 }
 </style>
 
