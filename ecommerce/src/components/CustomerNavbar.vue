@@ -93,7 +93,8 @@ a {
   text-decoration: none;
 }
 .brand {
-  margin-left: 29%;
+  margin: 0 auto;
+  width:100%
 }
 .title {
   margin-top: 20px;
@@ -122,14 +123,17 @@ a {
 .shopping {
   margin: 0 auto;
 }
+.signOutAll {
+  margin-top: -150px;
+  position:relative;
+}
 .signOut {
   cursor: pointer;
   color: #c5c6b6;
   font-size: 16px;
-}
-.signOutAll {
-  margin-top: -150px;
-  margin-right: -10px;
+  position:absolute;
+  right:0;
+  top:-15px;
 }
 .length {
   height: 30px;
