@@ -346,14 +346,13 @@ body {
   margin-top: 10px;
 }
 .card:hover::before {
-  content: "\2764";
+  content: "\2665";
   color: #ef5285;
   position: absolute;
   right: 30px;
   top: 20px;
-  font-size: 25px;
-}
-
+  font-size: 40px;
+ }
 .image {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
