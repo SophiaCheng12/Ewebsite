@@ -180,8 +180,9 @@ body {
   background-size: 150%;
   margin-top: 10px;
   padding-bottom: 10px;
-}
-
+  height: 100%;
+  width: 100%;
+  }
 .categoryImage {
   margin-bottom: 20px;
   position: relative;

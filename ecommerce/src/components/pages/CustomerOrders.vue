@@ -352,7 +352,7 @@ body {
   right: 30px;
   top: 20px;
   font-size: 40px;
- }
+ } 
 .image {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;

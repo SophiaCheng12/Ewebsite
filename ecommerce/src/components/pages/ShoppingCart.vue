@@ -77,6 +77,7 @@
         </div>
 
         <!-- order -->
+        <div class="orderBorder1">
         <div class="orderBorder">
           <div class="order">
             <div class="my-5 row justify-content-center">
@@ -211,6 +212,7 @@
         </div>
       </div>
     </div>
+    </div>
   </body>
 </template>
 
@@ -305,19 +307,23 @@ body {
   background-repeat: no-repeat;
   background-size: 270%;
   opacity: 0.6;
-  max-height: 1000px;
-  overflow: hidden;
   background-position-x: -1800px;
   background-position-y: -50px;
-}
+  width:100%;
+  height:100%;
+  background-color:blue;
+ }
 .scrollbar {
   font-size: 20px;
   width: 500px;
   color: #77aaad;
 }
 .table100 {
+  width:60%;
   position: relative;
   padding-top: 60px;
+  margin-right: 5rem; 
+  margin-left: 5rem; 
 }
 .table100-head {
   position: absolute;
@@ -330,19 +336,24 @@ body {
   overflow: auto;
 }
 .table {
-  width: 500px;
+  width: 600px;
   margin-top: -40px;
   color: #77aaad;
-}
-
+ }
 .shoppingOrder {
-  margin-left: 155px;
+  margin-left: 0px; 
+  width:100%;
+  height:100%;
+}
+.orderBorder1{
+  width:40%;
 }
 .orderBorder {
-  width: 630px;
-  margin-left: 100px;
-  background-image: url("https://cdn.pixabay.com/photo/2018/09/06/23/42/hydrangea-3659619__340.jpg");
-}
+   width:100%;
+   height:100%;
+   background-image: url("https://cdn.pixabay.com/photo/2018/09/06/23/42/hydrangea-3659619__340.jpg");
+   overflow: hidden
+   }
 .order {
   margin-top: 38px;
   margin-left: 100px;
