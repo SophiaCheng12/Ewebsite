@@ -288,11 +288,12 @@ body {
 }
 .totalProcess {
   margin-top: 60px;
-  
   padding-bottom: -60px;
   border-bottom-left-radius: 50%;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
+  height:100%;
+  width:100%;
  }
 .processTitle {
   margin-bottom: 70px;
@@ -313,6 +314,8 @@ body {
 }
 .footer {
   margin-top: -150px;
+  height:100%;
+  width:100%;
 }
 </style>
 
