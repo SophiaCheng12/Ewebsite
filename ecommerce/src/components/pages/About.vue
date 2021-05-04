@@ -75,8 +75,8 @@
         </div>
       </div>
     
-      <div>
-      <Footer class="footer" />
+      <div class="footer">
+      <Footer />
       </div>
     </div>
   </body>
@@ -289,11 +289,9 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 .totalProcess {
+  
   margin-top: 60px;
   padding-bottom: -60px;
-  border-bottom-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
   height:100%;
   width:100%;
  }
@@ -315,9 +313,9 @@ body {
    opacity:0.8
 }
 .footer {
-  margin-top: -150px;
-  height:100%;
-  width:100%;
+   /* border: 1px solid blue; */
+   height:100%;
+   width:100%;
 }
 </style>
 
