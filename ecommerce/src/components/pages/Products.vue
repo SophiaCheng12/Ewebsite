@@ -452,7 +452,7 @@ table {
   margin-left: 50px;
 }
 .tableBorder {
-  /* border: 1px solid red; */
+  /* border: 1px solid red;  */
   min-height: 600px;
 }
 th,
