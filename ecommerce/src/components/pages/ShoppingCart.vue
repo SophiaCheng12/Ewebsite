@@ -399,7 +399,7 @@ textarea {
   white-space: nowrap;
 }
 .total2{
-    padding-right:48px;
+   padding-right:58px;
     width: 300px
 }
 ::-webkit-scrollbar {
@@ -419,7 +419,7 @@ textarea {
 }
 .price {
   margin-left:24px;
-  width: 95px;
+  width: 95px; 
   white-space: nowrap;
   }
 .table thead th {
