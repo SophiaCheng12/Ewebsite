@@ -60,7 +60,7 @@ body {
   background-image: url("https://cdn.pixabay.com/photo/2021/02/26/11/20/wood-digital-paper-6051495__340.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  max-height: 445px;
+  /* max-height: 445px; */
   height: 100%;
   overflow: hidden;
 }
