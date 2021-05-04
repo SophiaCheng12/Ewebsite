@@ -185,9 +185,9 @@ body {
   background-repeat: no-repeat;
   background-size: 150%;
   margin-top: 10px;
-  padding-bottom: 10px;
-  height: 100%;
+  height:100%; 
   width: 100%;
+  height:480px;
   }
 .categoryImage {
   margin-bottom: 20px;
