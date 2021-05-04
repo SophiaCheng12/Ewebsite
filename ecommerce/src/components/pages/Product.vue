@@ -33,13 +33,19 @@
                   </p></strong
                 >
               </h5>
-              <!-- <p class="card-text">{{ product.content }}</p>
-                  <p>{{ product.description }}</p> -->
+             
+               
               <div class="d-flex justify-content-between align-items-baseline">
                 <div class="text-secondary" style="font-size: 18px">
                   Price: {{ product.price }}元
                 </div>
               </div>
+
+             <div>
+                <p class="card-text productContent ">{{ product.content }}</p> 
+             </div>
+
+
               <!-- select -->
               <div class="selectRelative">
                 <select
@@ -206,16 +212,24 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   opacity: 0.7;
 }
+.productContent{
+  width:100%;
+  height:80px;
+  /* border:1px solid red; */
+  margin-top:50px;
+  font-size:18px;
+  color: gray;
+}
 .selectRelative {
   position: relative;
 }
 .select {
   position: absolute;
-  top: 100px;
-  left: -10px;
+  top: -10px;
+  left:0px;
 }
 .card-footer {
-  margin-top: 160px;
+  margin-top: 40px;
 }
 .addCartButton {
   background-color: #eb9f9f;
