@@ -64,7 +64,7 @@ export default new VueRouter({
 
     },
     {
-      path: '/product',
+      path: '/product/:id',
       name: 'Product',
       component: Product
     },
