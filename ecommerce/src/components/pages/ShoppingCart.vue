@@ -17,7 +17,7 @@
                       <th width="120">Image</th>
                       <th width="120">Title</th>
                       <th width="120">Quantity</th>
-                      <th>Price</th>
+                      <th class="price1">Price</th>
                     </tr>
                   </thead>
                 </table>
@@ -65,7 +65,7 @@
                     <tr>
                       <td></td>
                       <td colspan="3" class="text-right total">總計</td>
-                      <td class="text-right">
+                      <td class="text-right total2">
                         <strong>{{ cart.total | currency }}元</strong>
                       </td>
                     </tr>
@@ -305,10 +305,10 @@ export default {
 body {
   background-image: url("https://cdn.pixabay.com/photo/2020/11/29/15/06/box-5788021__340.jpg");
   background-repeat: no-repeat;
-  background-size: 270%;
+  background-size: 250%;
   opacity: 0.6;
-  background-position-x: -1800px;
-  background-position-y: -50px;
+  background-position-x: -1500px;
+  background-position-y: -150px;
   width:100%;
   height:100%;
   background-color:blue;
@@ -319,34 +319,36 @@ body {
   color: #77aaad;
 }
 .table100 {
-  width:60%;
+  width: 600px;
   position: relative;
   padding-top: 60px;
-  margin-right: 5rem; 
+  margin-right: 10rem; 
   margin-left: 5rem; 
 }
 .table100-head {
   position: absolute;
-  width: 100%;
   top: 0;
   left: 0;
 }
 .table100-body {
-  max-height: 500px;
-  overflow: auto;
+   max-height: 500px;
+   overflow: auto;
 }
 .table {
-  width: 600px;
+  width: 600px; 
   margin-top: -40px;
   color: #77aaad;
- }
+}
 .shoppingOrder {
   margin-left: 0px; 
   width:100%;
   height:100%;
 }
+.price1{
+  padding-left:50px;
+}
 .orderBorder1{
-  width:40%;
+   width:40%;
 }
 .orderBorder {
    width:100%;
@@ -391,9 +393,14 @@ textarea {
   resize: none;
 }
 .total {
-  width: 300px;
-  padding-right: 6px;
+  /* border:1px solid yellow; */
+  width: 200px;
+  padding-right: 68px; 
   white-space: nowrap;
+}
+.total2{
+    padding-right:48px;
+    width: 300px
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -411,10 +418,10 @@ textarea {
   margin-left: -150px;
 }
 .price {
-  margin-left: 28px;
-  width: 95x;
+  margin-left:24px;
+  width: 95px;
   white-space: nowrap;
-}
+  }
 .table thead th {
   border-color: #f2e9e1;
 }
