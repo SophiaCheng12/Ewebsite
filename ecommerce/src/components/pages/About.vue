@@ -43,7 +43,7 @@
             :key="item.index"
             class="swiper_box"
           >
-            <router-link :to="{ name: 'Product', params: { id: item.id } }" target="_blank"> 
+            <router-link :to="{ name: 'Product', params: { id: item.id } }"> 
               <div class="image" style="width: 190px; height: 190px">
                 <img
                   :src="item.imageUrl"

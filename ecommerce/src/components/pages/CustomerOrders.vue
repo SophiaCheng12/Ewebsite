@@ -73,7 +73,7 @@
                     <h5 class="card-title">
                       <p class="text-dark">{{ item.title }}</p>
                     </h5>
-                    <!-- <p class="card-text cardText">{{ item.content }}</p> -->
+                   
                     <div
                       class="d-flex justify-content-between align-items-baseline priceRelative"
                     >
@@ -83,7 +83,7 @@
                   <div class="card-footer d-flex cardFooter">
                     <button type="button" class="btn btn btn-sm checkButton">
                       <router-link
-                        :to="{ name: 'Product', params: { id: item.id } }" target="_blank" 
+                        :to="{ name: 'Product', params: { id: item.id } }"
                       >
                         <p class="checkMore">查看更多</p>
                       </router-link>
