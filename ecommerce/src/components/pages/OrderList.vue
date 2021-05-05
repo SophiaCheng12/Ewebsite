@@ -279,15 +279,18 @@ export default {
 
 
 <style scoped>
+.orderList{
+  margin: 0 auto;
+}
 .tableForm {
-  margin-left: 35px;
+  margin-left: 4.37rem; 
   padding-top: 35px;
 }
 .tableBorder {
   min-height: 800px;
 }
 table {
-  width: 970px;
+ width:100%;
 }
 .productBorder {
   border-top: 2px solid #9baec8;
