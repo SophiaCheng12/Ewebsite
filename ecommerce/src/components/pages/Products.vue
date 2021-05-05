@@ -358,6 +358,7 @@ export default {
         if (response.data.success) {
           $("#productModal").modal("hide");
           vm.getProducts();
+          vm.$router.push('/customer_order')
         } else {
           $("#productModal").modal("hide");
           vm.getProducts();
