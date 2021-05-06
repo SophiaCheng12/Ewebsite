@@ -24,7 +24,7 @@
         }}</a>
       </li>
 
-      <li class="page-item" :class="{ disabled: !has_next }">
+      <li class="page-item" :class="{ disabled: has_next }">
         <a
           class="page-link"
           href="#"
@@ -47,6 +47,7 @@ export default {
       required: true,
     },
   },
+  //  props: ["initialPagination"],
 
   data() {
     return {
@@ -69,12 +70,14 @@ export default {
     //所有發出去的請求預設都會加入myCookie
     this.$http.defaults.headers.common.Authorization = myCookie;
     this.pagination = this.initialPagination;
-  },
-
+   },
+// page = 1
   methods: {
-    async getPagination(page = 1) {
+    async getPagination(page) {
+       console.log("Paginationpage",page)
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/orders?page=${page}`;
       const vm = this;
+
       try {
         const response = await this.$http.get(api);
         console.log("getPagination", response);
@@ -82,7 +85,9 @@ export default {
         this.current_page = response.data.pagination.current_page;
         this.has_next = response.data.pagination.has_next;
         this.has_pre = response.data.pagination.has_pre;
-        this.$emit("after-pagination", response.data.orders);
+        //  this.$emit("after-pagination", response.data.orders);
+        // this.$emit("after-pagination",initialPagination);
+        this.$emit("after-pagination",page);
       } catch (error) {
         console.log("error", error);
       }

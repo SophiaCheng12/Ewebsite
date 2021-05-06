@@ -73,11 +73,13 @@
       <div>
         <Pagination
           :initialPagination="pagination"
-          @after-pagination="handleAfterPagination"
+          
+           @after-pagination="getOrders"
           class="pagination"
         />
       </div>
-
+ <!-- @after-pagination="handleAfterPagination" -->
+ <!-- @after-pagination = getOrders -->
       <!-- Modal -->
 
       <div
@@ -197,6 +199,7 @@ export default {
       orders: [],
       orderList: { user: {} },
       pagination: {},
+      current_page: 1,
     };
   },
 
@@ -205,7 +208,12 @@ export default {
   },
 
   methods: {
-    async getOrders(page = 1) {
+    async getOrders(page) {
+      // console.log("orderspage",page)
+      if (page === undefined){
+        page = this.current_page
+      }
+      // console.log("orderspage2",page)
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/orders?page=${page}`;
       const vm = this;
       try {
@@ -216,6 +224,7 @@ export default {
         const { data } = response;
         vm.orders = data.orders;
         vm.pagination = response.data.pagination;
+        vm.current_page = response.data.pagination.current_page;
         vm.isLoading = false;
       } catch (error) {
         console.log("error", error);
@@ -241,12 +250,13 @@ export default {
       try {
         const response = await this.$http.put(api, { data: vm.orderList });
         console.log("updateOrder", response);
+        
         if (response.data.success) {
           $("#orderModal").modal("hide");
           vm.getOrders();
-        } else {
+           } else {
           $("#orderModal").modal("hide");
-          vm.getOrders();
+          vm.getOrders(page = 1);
           console.log("無法編輯");
         }
         console.log(response);
@@ -255,11 +265,12 @@ export default {
       }
     },
 
-    handleAfterPagination(data) {
-      this.orders = data;
-      console.log("data", data);
-    },
-  },
+  //   handleAfterPagination(page) {
+  //     // this.orders = data;
+  //     // console.log("data", data);
+  //      console.log("orderspage",page)
+  //   },
+   },
 
   filters: {
     formatTime(num) {
