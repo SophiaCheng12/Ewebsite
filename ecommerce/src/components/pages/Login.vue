@@ -92,7 +92,6 @@ body {
   height: 100%;
   opacity: 0.8;
   transform: rotate(180deg);
-  border: 1px solid red;
 }
 .signin {
   letter-spacing: 5px;
