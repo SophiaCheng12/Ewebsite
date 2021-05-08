@@ -24,7 +24,7 @@
         }}</a>
       </li>
 
-      <li class="page-item" :class="{ disabled: has_next }">
+      <li class="page-item" :class="{ disabled: !has_next }">
         <a
           class="page-link"
           href="#"
