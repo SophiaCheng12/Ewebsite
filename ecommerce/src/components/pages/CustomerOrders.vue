@@ -108,11 +108,11 @@
               </div>
             </div>
 
-            <div class="d-flex flex-row justify-content-center pagination">
-              <Pagination
+            <div class="d-flex flex-row justify-content-center">
+              <Pagination class="pagination"
                 :initialPagination="pagination"
                 @after-pagination="handleAfterPagination"
-                v-if="isPagination"
+                v-if="isPagination"                           
               />
             </div>
           </main>
@@ -431,6 +431,6 @@ body {
 .pagination {
   margin-top: 60px;
   margin-bottom: 30px;
-  margin-left: -35px;
-}
+ }
+
 </style>
