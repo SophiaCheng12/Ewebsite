@@ -53,7 +53,7 @@
         </table>
       </div>
     </div>
-    <div class="paginationBorder">
+    <div class="d-flex flex-row justify-content-center">
     <Pagination
       :initialPagination="pagination"
       @after-pagination="handleAfterPagination"
@@ -487,7 +487,7 @@ td {
 }
 .pagination {
   margin-top: 100px;
-  margin-left: 430px;
+  margin-left: 80px; 
   margin-bottom: 20px;
 }
 
@@ -531,9 +531,5 @@ td {
 }
 textarea {
   resize: none;
-}
-.paginationBorder{
-  margin: 0 auto; 
-  width: 80%;
 }
 </style>
