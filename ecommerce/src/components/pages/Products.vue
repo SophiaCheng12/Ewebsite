@@ -53,12 +53,13 @@
         </table>
       </div>
     </div>
+    <div class="paginationBorder">
     <Pagination
       :initialPagination="pagination"
       @after-pagination="handleAfterPagination"
       class="pagination"
     />
-
+    </div>
     <!-- Modal -->
     <div
       class="modal fade"
@@ -453,7 +454,7 @@ table {
   margin-left: 50px;
 }
 .tableBorder {
-  /* border: 1px solid red;  */
+ 
   min-height: 600px;
 }
 th,
@@ -530,5 +531,9 @@ td {
 }
 textarea {
   resize: none;
+}
+.paginationBorder{
+  margin: 0 auto; 
+  width: 80%;
 }
 </style>
