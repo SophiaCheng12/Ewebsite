@@ -4,7 +4,7 @@
 
     <div class="text-right mt-4 tableForm">
       <div class="tableBorder">
-        <table class="table mt-4">
+        <table class="table mt-4" >
           <thead>
             <tr>
               <th width="30" class="time">購買時間</th>
@@ -70,7 +70,7 @@
           </tbody>
         </table>
       </div>
-      <div>
+      <div class="paginationBorder">
         <Pagination
           :initialPagination="pagination"
           
@@ -78,8 +78,7 @@
           class="pagination"
         />
       </div>
- <!-- @after-pagination="handleAfterPagination" -->
- <!-- @after-pagination = getOrders -->
+ 
       <!-- Modal -->
 
       <div
@@ -290,18 +289,18 @@ export default {
 
 
 <style scoped>
-.orderList{
-  margin: 0 auto;
-}
+ 
 .tableForm {
-  margin-left: 4.37rem; 
   padding-top: 35px;
 }
 .tableBorder {
   min-height: 800px;
+  margin: 0 auto; 
+  width: 80%;
 }
 table {
  width:100%;
+ height: 100%;
 }
 .productBorder {
   border-top: 2px solid #9baec8;
@@ -455,9 +454,13 @@ label {
   outline: none;
   box-shadow: none;
 }
+.paginationBorder{
+   margin: 0 auto; 
+   width: 80%;
+  }
 .pagination {
   margin-top: 90px;
   margin-bottom: 20px;
-  margin-left: 390px;
+  margin-left: 390px; 
 }
 </style>
