@@ -295,9 +295,10 @@ export default {
   margin-left: 50px;
 }
 .tableBorder {
+ 
   min-height: 800px;
-  /* margin: 0 auto; 
-  width: 80%; */
+  /* margin: 0 auto; */
+   width: 95%;   
 }
 table {
  width:100%;
