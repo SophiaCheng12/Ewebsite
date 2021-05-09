@@ -70,7 +70,7 @@
           </tbody>
         </table>
       </div>
-      <div class="paginationBorder">
+      <div class="d-flex flex-row justify-content-center">
         <Pagination
           :initialPagination="pagination"
           
@@ -292,11 +292,12 @@ export default {
  
 .tableForm {
   padding-top: 35px;
+  margin-left: 50px;
 }
 .tableBorder {
   min-height: 800px;
-  margin: 0 auto; 
-  width: 80%;
+  /* margin: 0 auto; 
+  width: 80%; */
 }
 table {
  width:100%;
@@ -454,13 +455,9 @@ label {
   outline: none;
   box-shadow: none;
 }
-.paginationBorder{
-   margin: 0 auto; 
-   width: 80%;
-  }
 .pagination {
   margin-top: 90px;
   margin-bottom: 20px;
-  margin-left: 390px; 
+  margin-left: 80px; 
 }
 </style>
