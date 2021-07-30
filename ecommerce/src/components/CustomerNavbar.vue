@@ -6,7 +6,7 @@
           <div class="d-flex flex-column align-items-center">
             <div>
               <router-link to="/about"
-                ><h2 class="title">Jewelry Box</h2></router-link
+                ><h2 class="title animate__animated animate__zoomIn">Jewelry Box</h2></router-link
               >
             </div>
             <div class="d-flex flex-row info">
