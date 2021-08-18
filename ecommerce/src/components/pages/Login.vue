@@ -86,7 +86,7 @@ body {
   display: flex;
   align-items: center;
   padding-top: 390px;
-  background-image: url("https://cdn.pixabay.com/photo/2018/01/09/22/51/rose-3072698__340.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2021/08/03/02/06/flowery-6518216__340.jpg");
   background-repeat: no-repeat;
   background-size: 150%;
   height: 100%;
